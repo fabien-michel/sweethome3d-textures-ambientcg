@@ -1,0 +1,10 @@
+# PluginTexturesCatalog.properties
+# Textures designed by Lennart Demes under Creative Commons CC0 1.0 Universal License
+
+id=ambientcg#ambientcgTextures
+name=ambientCG / Textures catalog
+description=Textures designed by Lennart Demes under Creative Commons CC0 1.0 Universal License
+version={version}
+license=Creative Commons CC0 1.0 Universal License
+provider=www.ambientcg.com
+

@@ -1,0 +1,5 @@
+__pycache__/
+
+PluginTexturesCatalog.properties
+requests_cache.sqlite
+ambiantcg_*/*.jpg
