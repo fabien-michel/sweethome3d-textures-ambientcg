@@ -7,10 +7,10 @@ The texture are resized to 3 sizes, so you can choose quality.
 
 ## Install
 
-Juste download the .sh3t file you want and use Texture library import feature from Sweethome3D from furniture menu.
+Just download the .sh3t file you want and use the texture library import feature from Sweethome3D from "Furniture" menu.
 
 ## Missing dimensions
-Sadly a lot of textures havn't dimension defined in ambiantcg.com. The script default to 100cm×100cm.
+Sadly a lot of textures haven't dimensions defined in ambiantcg.com. The script default to 100cm×100cm.
 
 ## Build / update the library
 
