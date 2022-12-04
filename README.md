@@ -1,6 +1,6 @@
-# Sweethome3D texture library generator from ambiantcg.com textures
+# Sweethome3D texture library generator from ambientcg.com textures
 
-A python script which download all textures from [ambiantcg.com](https://ambientcg.com/) and build a [Sweethome3D](https://www.sweethome3d.com) texture library (`.sh3t`)
+A python script which download all textures from [ambientcg.com](https://ambientcg.com/) and build a [Sweethome3D](https://www.sweethome3d.com) texture library (`.sh3t`)
 The texture are resized to 3 sizes, so you can choose quality. 
 
 3 qualities available: 256, 512 and 1024 pixels width.
@@ -10,7 +10,7 @@ The texture are resized to 3 sizes, so you can choose quality.
 Just download the .sh3t file you want and use the texture library import feature from Sweethome3D from "Furniture" menu.
 
 ## Missing dimensions
-Sadly a lot of textures haven't dimensions defined in ambiantcg.com. The script default to 100cm×100cm.
+Sadly a lot of textures haven't dimensions defined in ambientcg.com. The script default to 100cm×100cm.
 
 ## Build / update the library
 

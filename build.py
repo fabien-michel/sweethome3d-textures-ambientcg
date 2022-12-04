@@ -19,10 +19,10 @@ TOTAL_LIMIT = None
 
 JSON_BATCH_SIZE = 100
 BASE_URL = "https://ambientcg.com/api/v2/full_json"
-ORIGINAL_IMAGES_PATH = Path("ambiantcg_originals")
-RESIZED_IMAGE_BASE_PATH = Path("ambiantcg")
-IN_ZIP_IMAGE_PATH = "ambiantcg"
-SH3T_PACKAGE_BASE_PATH = Path("ambiantcg.sh3t")
+ORIGINAL_IMAGES_PATH = Path("ambientcg_originals")
+RESIZED_IMAGE_BASE_PATH = Path("ambientcg")
+IN_ZIP_IMAGE_PATH = "ambientcg"
+SH3T_PACKAGE_BASE_PATH = Path("ambientcg.sh3t")
 CATALOG_FILE_PATH = Path("PluginTexturesCatalog.properties")
 
 
@@ -75,7 +75,7 @@ def get_asset_data(asset):
 
     return {
         "catalog_infos": {
-            "id": f"ambiantcg#{asset['assetId']}",
+            "id": f"ambientcg#{asset['assetId']}",
             "name": asset["displayName"],
             "category": f"[ACG]{asset['category']}",
             "image": f"/{IN_ZIP_IMAGE_PATH}/{asset['assetId']}.jpg",
