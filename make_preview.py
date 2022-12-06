@@ -1,3 +1,4 @@
+import multiprocessing
 import os
 from collections import defaultdict
 from operator import itemgetter
@@ -5,11 +6,10 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
-
 # Configure values
 IMAGE_WIDTH = 1024
 THUMBNAIL_SIZE = 128
-IMAGE_MARGIN = 32
+IMAGE_MARGIN = 16
 THUMBNAILS_GAP_WIDTH = 16
 THUMBNAILS_GAP_HEIGHT = 48
 TEXT_PLACEHOLDER = 32
@@ -30,8 +30,8 @@ def group_by_categories(catalog_data):
     return categories
 
 
-def make_category_preview(category_name, catalog_entries):
-
+def make_category_preview(catalog_entries):
+    category_name = catalog_entries[0]["category"]
     print(f"Create preview for category {category_name}")
 
     # Get the list of jpeg files in the current directory
@@ -39,7 +39,7 @@ def make_category_preview(category_name, catalog_entries):
 
     # Calculate the number of columns and rows needed
     num_thumbs = len(catalog_entries)
-    num_cols = int(IMAGE_WIDTH / THUMBNAIL_SIZE)
+    num_cols = int((IMAGE_WIDTH - IMAGE_MARGIN * 2) / (THUMBNAIL_SIZE + THUMBNAILS_GAP_WIDTH / 2))
     num_rows = num_thumbs // num_cols + (1 if num_thumbs % num_cols else 0)
 
     # Calculate the height of the image based on the number of rows
@@ -73,7 +73,7 @@ def make_category_preview(category_name, catalog_entries):
         draw.text(
             (
                 x + (THUMBNAIL_SIZE - text_width) / 2,
-                y + THUMBNAIL_SIZE,
+                y + THUMBNAIL_SIZE + 5,
             ),
             entry['assetId'],
             (0, 0, 0),
@@ -86,5 +86,6 @@ def make_category_preview(category_name, catalog_entries):
 
 def make_preview(catalog_data):
     categories = group_by_categories(catalog_data)
-    for category_name, entries in categories.items():
-        make_category_preview(category_name, entries)
+
+    with multiprocessing.Pool() as p:
+        p.map(make_category_preview, categories.values())
