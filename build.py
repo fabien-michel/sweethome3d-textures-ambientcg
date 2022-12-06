@@ -71,7 +71,7 @@ def get_asset_data(asset):
     if not zip_url:
         raise Exception("No zip url found")
 
-    if asset['category'] in EXCLUDED_CATEGORIES:
+    if asset["category"] in EXCLUDED_CATEGORIES:
         raise Exception("Excluded category")
 
     return {
