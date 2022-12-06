@@ -5,9 +5,20 @@ The texture are resized to 3 sizes, so you can choose quality.
 
 3 qualities available: 256, 512 and 1024 pixels width.
 
+Current version: 1.1<br>
+Total textures: 1120
+
 ## Install
 
 Just download the .sh3t file you want and use the texture library import feature from Sweethome3D from "Furniture" menu.
+
+
+* [ambientcg_1024.sh3t](https://github.com/fabien-michel/sweethome3d-textures-ambientcg/raw/v1.1/ambientcg_1024.sh3t) - 172.6 MB
+
+* [ambientcg_512.sh3t](https://github.com/fabien-michel/sweethome3d-textures-ambientcg/raw/v1.1/ambientcg_512.sh3t) - 45.3 MB
+
+* [ambientcg_256.sh3t](https://github.com/fabien-michel/sweethome3d-textures-ambientcg/raw/v1.1/ambientcg_256.sh3t) - 12.2 MB
+
 
 ## Missing dimensions
 Sadly a lot of textures haven't dimensions defined in ambientcg.com. The script default to 100cm×100cm.
@@ -44,212 +55,208 @@ The current code and content follow the same licence.
 
 ## Preview
 
+
 ### Asphalt
 <picture>
-  <img alt="Asphalt.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Asphalt.webp">
+  <img alt="Preview of Asphalt" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Asphalt.webp">
 </picture>
 
 ### Bark
 <picture>
-  <img alt="Bark.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Bark.webp">
+  <img alt="Preview of Bark" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Bark.webp">
 </picture>
 
 ### Bricks
 <picture>
-  <img alt="Bricks.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Bricks.webp">
+  <img alt="Preview of Bricks" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Bricks.webp">
 </picture>
 
 ### Cardboard
 <picture>
-  <img alt="Cardboard.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Cardboard.webp">
+  <img alt="Preview of Cardboard" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Cardboard.webp">
 </picture>
 
 ### Carpet
 <picture>
-  <img alt="Carpet.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Carpet.webp">
+  <img alt="Preview of Carpet" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Carpet.webp">
 </picture>
 
 ### Chainmail
 <picture>
-  <img alt="Chainmail.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Chainmail.webp">
+  <img alt="Preview of Chainmail" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Chainmail.webp">
 </picture>
 
 ### Chipboard
 <picture>
-  <img alt="Chipboard.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Chipboard.webp">
+  <img alt="Preview of Chipboard" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Chipboard.webp">
 </picture>
 
 ### Clay
 <picture>
-  <img alt="Clay.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Clay.webp">
+  <img alt="Preview of Clay" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Clay.webp">
 </picture>
 
 ### Concrete
 <picture>
-  <img alt="Concrete.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Concrete.webp">
+  <img alt="Preview of Concrete" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Concrete.webp">
 </picture>
 
 ### Cork
 <picture>
-  <img alt="Cork.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Cork.webp">
+  <img alt="Preview of Cork" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Cork.webp">
 </picture>
 
 ### CorrugatedSteel
 <picture>
-  <img alt="CorrugatedSteel.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/CorrugatedSteel.webp">
+  <img alt="Preview of CorrugatedSteel" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/CorrugatedSteel.webp">
 </picture>
 
 ### DiamondPlate
 <picture>
-  <img alt="DiamondPlate.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/DiamondPlate.webp">
+  <img alt="Preview of DiamondPlate" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/DiamondPlate.webp">
 </picture>
 
 ### Fabric
 <picture>
-  <img alt="Fabric.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Fabric.webp">
+  <img alt="Preview of Fabric" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Fabric.webp">
 </picture>
 
 ### GlazedTerracotta
 <picture>
-  <img alt="GlazedTerracotta.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/GlazedTerracotta.webp">
+  <img alt="Preview of GlazedTerracotta" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/GlazedTerracotta.webp">
 </picture>
 
 ### Grass
 <picture>
-  <img alt="Grass.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Grass.webp">
+  <img alt="Preview of Grass" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Grass.webp">
 </picture>
 
 ### Gravel
 <picture>
-  <img alt="Gravel.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Gravel.webp">
+  <img alt="Preview of Gravel" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Gravel.webp">
 </picture>
 
 ### Ground
 <picture>
-  <img alt="Ground.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Ground.webp">
+  <img alt="Preview of Ground" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Ground.webp">
 </picture>
 
 ### Marble
 <picture>
-  <img alt="Marble.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Marble.webp">
+  <img alt="Preview of Marble" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Marble.webp">
 </picture>
 
 ### Metal
 <picture>
-  <img alt="Metal.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Metal.webp">
+  <img alt="Preview of Metal" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Metal.webp">
 </picture>
 
 ### Moss
 <picture>
-  <img alt="Moss.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Moss.webp">
+  <img alt="Preview of Moss" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Moss.webp">
 </picture>
 
 ### OfficeCeiling
 <picture>
-  <img alt="OfficeCeiling.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/OfficeCeiling.webp">
+  <img alt="Preview of OfficeCeiling" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/OfficeCeiling.webp">
 </picture>
 
 ### Paint
 <picture>
-  <img alt="Paint.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Paint.webp">
+  <img alt="Preview of Paint" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Paint.webp">
 </picture>
 
 ### Paper
 <picture>
-  <img alt="Paper.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Paper.webp">
+  <img alt="Preview of Paper" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Paper.webp">
 </picture>
 
 ### PavingStones
 <picture>
-  <img alt="PavingStones.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/PavingStones.webp">
-</picture>
-
-### PineNeedles
-<picture>
-  <img alt="PineNeedles.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/PineNeedles.webp">
+  <img alt="Preview of PavingStones" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/PavingStones.webp">
 </picture>
 
 ### Planks
 <picture>
-  <img alt="Planks.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Planks.webp">
+  <img alt="Preview of Planks" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Planks.webp">
 </picture>
 
 ### Plaster
 <picture>
-  <img alt="Plaster.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Plaster.webp">
+  <img alt="Preview of Plaster" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Plaster.webp">
 </picture>
 
 ### Plastic
 <picture>
-  <img alt="Plastic.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Plastic.webp">
+  <img alt="Preview of Plastic" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Plastic.webp">
 </picture>
 
 ### Porcelain
 <picture>
-  <img alt="Porcelain.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Porcelain.webp">
+  <img alt="Preview of Porcelain" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Porcelain.webp">
 </picture>
 
 ### Road
 <picture>
-  <img alt="Road.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Road.webp">
-</picture>
-
-### Rocks
-<picture>
-  <img alt="Rocks.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Rocks.webp">
+  <img alt="Preview of Road" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Road.webp">
 </picture>
 
 ### Rock
 <picture>
-  <img alt="Rock.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Rock.webp">
+  <img alt="Preview of Rock" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Rock.webp">
+</picture>
+
+### Rocks
+<picture>
+  <img alt="Preview of Rocks" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Rocks.webp">
 </picture>
 
 ### RoofingTiles
 <picture>
-  <img alt="RoofingTiles.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/RoofingTiles.webp">
+  <img alt="Preview of RoofingTiles" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/RoofingTiles.webp">
 </picture>
 
 ### Rust
 <picture>
-  <img alt="Rust.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Rust.webp">
+  <img alt="Preview of Rust" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Rust.webp">
 </picture>
 
 ### Snow
 <picture>
-  <img alt="Snow.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Snow.webp">
+  <img alt="Preview of Snow" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Snow.webp">
 </picture>
 
 ### SolarPanel
 <picture>
-  <img alt="SolarPanel.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/SolarPanel.webp">
+  <img alt="Preview of SolarPanel" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/SolarPanel.webp">
 </picture>
 
 ### Terrazzo
 <picture>
-  <img alt="Terrazzo.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Terrazzo.webp">
+  <img alt="Preview of Terrazzo" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Terrazzo.webp">
 </picture>
 
 ### Tiles
 <picture>
-  <img alt="Tiles.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Tiles.webp">
-</picture>
-
-### WoodChips
-<picture>
-  <img alt="WoodChips.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/WoodChips.webp">
-</picture>
-
-### WoodFloor
-<picture>
-  <img alt="WoodFloor.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/WoodFloor.webp">
-</picture>
-
-### WoodSiding
-<picture>
-  <img alt="WoodSiding.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/WoodSiding.webp">
+  <img alt="Preview of Tiles" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Tiles.webp">
 </picture>
 
 ### Wood
 <picture>
-  <img alt="Wood.webp" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/main/previews/Wood.webp">
+  <img alt="Preview of Wood" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/Wood.webp">
+</picture>
+
+### WoodChips
+<picture>
+  <img alt="Preview of WoodChips" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/WoodChips.webp">
+</picture>
+
+### WoodFloor
+<picture>
+  <img alt="Preview of WoodFloor" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/WoodFloor.webp">
+</picture>
+
+### WoodSiding
+<picture>
+  <img alt="Preview of WoodSiding" src="https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/v1.1/previews/WoodSiding.webp">
 </picture>

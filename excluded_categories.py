@@ -25,6 +25,7 @@ EXCLUDED_CATEGORIES = (
     "Painting",
     "Pathway",
     "PavingEdge",
+    "PineNeedles",
     "Pipe",
     "Rails",
     "RoadLines",
