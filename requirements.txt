@@ -2,3 +2,4 @@ ipdb
 requests
 requests-cache
 Pillow
+jinja2

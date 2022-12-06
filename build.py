@@ -8,6 +8,7 @@ from pathlib import Path
 
 import requests
 import requests_cache
+from jinja2 import Environment, FileSystemLoader, select_autoescape
 from PIL import Image, ImageOps
 
 from excluded_categories import EXCLUDED_CATEGORIES
@@ -205,15 +206,15 @@ def write_catalog_file(catalog_data):
         content += entry_content + "\n\n"
     CATALOG_FILE_PATH.write_text(content)
 
+def get_package_path(size):
+    return SH3T_PACKAGE_BASE_PATH.with_stem(SH3T_PACKAGE_BASE_PATH.stem + f"_{size}")
 
 def package_lib(catalog_data):
     """
     Create .sh3t (zip file)
     """
     for size in SIZES:
-        sh3t_file_path = SH3T_PACKAGE_BASE_PATH.with_stem(
-            SH3T_PACKAGE_BASE_PATH.stem + f"_{size}"
-        )
+        sh3t_file_path = get_package_path(size)
         print(f"Build package {sh3t_file_path}")
         if sh3t_file_path.exists():
             sh3t_file_path.unlink()
@@ -227,6 +228,23 @@ def package_lib(catalog_data):
                 )
 
 
+def build_readme(catalog_data):
+    print("Build README.md")
+    env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
+    template = env.get_template("README.jinga")
+    git_tag = f"v{VERSION}"
+    preview_categories = sorted(list(set(entry['category'] for entry in catalog_data)))
+    Path('README.md').write_text(template.render(
+        download_base_url = f"https://github.com/fabien-michel/sweethome3d-textures-ambientcg/raw/{git_tag}",
+        preview_base_url = f"https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/{git_tag}/previews",
+        version = VERSION,
+        catalog_data = catalog_data,
+        git_tag = git_tag,
+        preview_categories = preview_categories,
+        download_versions = [get_package_path(size) for size in SIZES]
+    ))
+
+
 def build_texture_lib(options):
     catalog_data = fetch_catalog_data(options)
     download_images(catalog_data, options)
@@ -234,6 +252,7 @@ def build_texture_lib(options):
     write_catalog_file(catalog_data)
     package_lib(catalog_data)
     make_preview(catalog_data)
+    build_readme(catalog_data)
 
 
 if __name__ == "__main__":

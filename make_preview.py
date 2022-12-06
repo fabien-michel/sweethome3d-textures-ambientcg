@@ -89,3 +89,5 @@ def make_preview(catalog_data):
 
     with multiprocessing.Pool() as p:
         p.map(make_category_preview, categories.values())
+    
+    return categories
