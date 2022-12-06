@@ -11,6 +11,7 @@ import requests_cache
 from PIL import Image, ImageOps
 
 from excluded_categories import EXCLUDED_CATEGORIES
+from make_preview import make_preview
 
 VERSION = "1.0"
 
@@ -84,6 +85,7 @@ def get_asset_data(asset):
             "creator": "ambientCG.com",
         },
         "assetId": asset["assetId"],
+        "category": asset['category'],
         "zip_url": zip_url,
         "in_zip_jpg_filename": jpg_filename,
         "image_filename": f"{asset['assetId']}.jpg",
@@ -231,6 +233,7 @@ def build_texture_lib(options):
     resize_images(catalog_data)
     write_catalog_file(catalog_data)
     package_lib(catalog_data)
+    make_preview(catalog_data)
 
 
 if __name__ == "__main__":
