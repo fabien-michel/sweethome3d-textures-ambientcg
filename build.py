@@ -14,7 +14,7 @@ from PIL import Image, ImageOps
 from excluded_categories import EXCLUDED_CATEGORIES
 from make_preview import make_preview
 
-VERSION = "1.1"
+VERSION = "1.2"
 
 SIZES = (1024, 512, 256)
 TOTAL_LIMIT = None
@@ -100,6 +100,7 @@ def fetch_catalog_data(options):
     """
     expire_after = 0 if options.no_json_cache else -1
     session = requests_cache.CachedSession("requests_cache", expire_after=expire_after)
+    session.remove_expired_responses()
     base_params = {
         "type": "Material",
         "include": "displayData,dimensionsData,downloadData",
