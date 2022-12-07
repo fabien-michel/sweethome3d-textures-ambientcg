@@ -21,6 +21,7 @@ ORIGINAL_IMAGES_PATH = Path("ambientcg_originals")
 
 PREVIEWS_DIR.mkdir(exist_ok=True)
 
+
 def group_by_categories(catalog_data):
     categories = defaultdict(list)
     for entry in catalog_data:
@@ -39,11 +40,15 @@ def make_category_preview(catalog_entries):
 
     # Calculate the number of columns and rows needed
     num_thumbs = len(catalog_entries)
-    num_cols = int((IMAGE_WIDTH - IMAGE_MARGIN * 2) / (THUMBNAIL_SIZE + THUMBNAILS_GAP_WIDTH / 2))
+    num_cols = int(
+        (IMAGE_WIDTH - IMAGE_MARGIN * 2) / (THUMBNAIL_SIZE + THUMBNAILS_GAP_WIDTH / 2)
+    )
     num_rows = num_thumbs // num_cols + (1 if num_thumbs % num_cols else 0)
 
     # Calculate the height of the image based on the number of rows
-    image_height = 2 * IMAGE_MARGIN + num_rows * (THUMBNAIL_SIZE + THUMBNAILS_GAP_HEIGHT )
+    image_height = 2 * IMAGE_MARGIN + num_rows * (
+        THUMBNAIL_SIZE + THUMBNAILS_GAP_HEIGHT
+    )
 
     # Create a blank image with the configured width and height
     main_image = Image.new("RGB", (IMAGE_WIDTH, image_height), (255, 255, 255))
@@ -55,7 +60,7 @@ def make_category_preview(catalog_entries):
     # Iterate over the files, adding a thumbnail for each one
     for index, entry in enumerate(catalog_entries):
         # Open the image file
-        image = Image.open(ORIGINAL_IMAGES_PATH  / entry["image_filename"])
+        image = Image.open(ORIGINAL_IMAGES_PATH / entry["image_filename"])
 
         # Resize the image to the thumbnail size
         # ImageOps.fit(image, )
@@ -63,19 +68,21 @@ def make_category_preview(catalog_entries):
 
         # Calculate the position to paste the thumbnail
         x = IMAGE_MARGIN + (index % num_cols) * (THUMBNAIL_SIZE + THUMBNAILS_GAP_WIDTH)
-        y = IMAGE_MARGIN + (index // num_cols) * (THUMBNAIL_SIZE + THUMBNAILS_GAP_HEIGHT)
+        y = IMAGE_MARGIN + (index // num_cols) * (
+            THUMBNAIL_SIZE + THUMBNAILS_GAP_HEIGHT
+        )
 
         # Paste the thumbnail onto the main image
         main_image.paste(image, (x, y))
 
         # Draw the filename under the thumbnail
-        text_width, text_height = draw.textsize(entry['assetId'], font=font)
+        text_width, text_height = draw.textsize(entry["assetId"], font=font)
         draw.text(
             (
                 x + (THUMBNAIL_SIZE - text_width) / 2,
                 y + THUMBNAIL_SIZE + 5,
             ),
-            entry['assetId'],
+            entry["assetId"],
             (0, 0, 0),
             font=font,
         )
@@ -89,5 +96,3 @@ def make_preview(catalog_data):
 
     with multiprocessing.Pool() as p:
         p.map(make_category_preview, categories.values())
-    
-    return categories

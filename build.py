@@ -86,7 +86,7 @@ def get_asset_data(asset):
             "creator": "ambientCG.com",
         },
         "assetId": asset["assetId"],
-        "category": asset['category'],
+        "category": asset["category"],
         "zip_url": zip_url,
         "in_zip_jpg_filename": jpg_filename,
         "image_filename": f"{asset['assetId']}.jpg",
