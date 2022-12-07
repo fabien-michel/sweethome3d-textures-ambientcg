@@ -6,18 +6,18 @@ The texture are resized to 3 sizes, so you can choose quality.
 3 qualities available: 256, 512 and 1024 pixels width.
 
 Current version: 1.2<br>
-Total textures: 1120
+Total textures: 1126
 
 ## Install
 
 Just download the .sh3t file you want and use the texture library import feature from Sweethome3D from "Furniture" menu.
 
 
-* [ambientcg_1024.sh3t](https://github.com/fabien-michel/sweethome3d-textures-ambientcg/raw/v1.2/ambientcg_1024.sh3t) - 172.6 MB
+* [ambientcg_1024.sh3t](https://github.com/fabien-michel/sweethome3d-textures-ambientcg/raw/v1.2/ambientcg_1024.sh3t) - 173.5 MB
 
-* [ambientcg_512.sh3t](https://github.com/fabien-michel/sweethome3d-textures-ambientcg/raw/v1.2/ambientcg_512.sh3t) - 45.3 MB
+* [ambientcg_512.sh3t](https://github.com/fabien-michel/sweethome3d-textures-ambientcg/raw/v1.2/ambientcg_512.sh3t) - 45.5 MB
 
-* [ambientcg_256.sh3t](https://github.com/fabien-michel/sweethome3d-textures-ambientcg/raw/v1.2/ambientcg_256.sh3t) - 12.2 MB
+* [ambientcg_256.sh3t](https://github.com/fabien-michel/sweethome3d-textures-ambientcg/raw/v1.2/ambientcg_256.sh3t) - 12.3 MB
 
 
 ## Missing dimensions
