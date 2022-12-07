@@ -101,6 +101,8 @@ def fetch_catalog_data(options):
     """
     # expire_after = 0 if options.no_json_cache else -1
     session = requests_cache.CachedSession("requests_cache", expire_after=timedelta(days=1))
+    if options.no_json_cache:
+        session.cache.clear()
     session.remove_expired_responses()
     base_params = {
         "type": "Material",
