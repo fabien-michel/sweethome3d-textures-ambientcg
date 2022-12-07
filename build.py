@@ -1,4 +1,5 @@
 import argparse
+from datetime import timedelta
 import multiprocessing
 import zipfile
 from functools import partial
@@ -98,8 +99,8 @@ def fetch_catalog_data(options):
     Fetch remote JSON of all material assets and return list of data required to
     download images and to build calalog
     """
-    expire_after = 0 if options.no_json_cache else -1
-    session = requests_cache.CachedSession("requests_cache", expire_after=expire_after)
+    # expire_after = 0 if options.no_json_cache else -1
+    session = requests_cache.CachedSession("requests_cache", expire_after=timedelta(days=1))
     session.remove_expired_responses()
     base_params = {
         "type": "Material",
