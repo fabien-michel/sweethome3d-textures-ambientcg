@@ -14,7 +14,7 @@ from PIL import Image, ImageOps
 from excluded_categories import EXCLUDED_CATEGORIES
 from make_preview import make_preview
 
-VERSION = "1.2"
+VERSION = Path('VERSION').read_text()
 
 SIZES = (1024, 512, 256)
 TOTAL_LIMIT = None
