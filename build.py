@@ -1,8 +1,9 @@
 import argparse
 from datetime import timedelta
 import multiprocessing
+from time import strftime
 import zipfile
-from functools import partial
+from functools import lru_cache, partial
 from io import BytesIO
 from itertools import product
 from pathlib import Path
@@ -15,7 +16,6 @@ from PIL import Image, ImageOps
 from excluded_categories import EXCLUDED_CATEGORIES
 from make_preview import make_preview
 
-VERSION = Path('VERSION').read_text()
 
 SIZES = (1024, 512, 256)
 TOTAL_LIMIT = None
@@ -27,9 +27,23 @@ RESIZED_IMAGE_BASE_PATH = Path("ambientcg")
 IN_ZIP_IMAGE_PATH = "ambientcg"
 SH3T_PACKAGE_BASE_PATH = Path("ambientcg.sh3t")
 CATALOG_FILE_PATH = Path("PluginTexturesCatalog.properties")
-
+VERSION_PATH = Path("VERSION")
 
 ORIGINAL_IMAGES_PATH.mkdir(exist_ok=True)
+
+def get_version(options):
+    """
+    return today version
+    """
+    if options.no_version:
+        return VERSION_PATH.read_text(encoding='utf-8')
+
+    return strftime("%Y.%m.%d")
+
+def write_version(version):
+    print(f"Version: {version}")
+    VERSION_PATH.write_text(version, encoding="utf-8")
+
 
 
 def check_file(zip_content, endswith_strings):
@@ -198,11 +212,11 @@ def resize_images(catalog_data):
             p.map(partial(resize_image, size=size), image_files)
 
 
-def write_catalog_file(catalog_data):
+def write_catalog_file(catalog_data, version):
     """
     Write PluginTexturesCatalog.properties file from given catalog data
     """
-    content = Path("catalog_header.txt").read_text().format(version=VERSION)
+    content = Path("catalog_header.txt").read_text().format(version=version)
     for index, entry in enumerate(catalog_data):
         entry_content = "\n".join(
             f"{key}#{index+1}={value}" for key, value in entry["catalog_infos"].items()
@@ -232,16 +246,16 @@ def package_lib(catalog_data):
                 )
 
 
-def build_readme(catalog_data):
+def build_readme(catalog_data, version):
     print("Build README.md")
     env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
     template = env.get_template("README.jinga")
-    git_tag = f"v{VERSION}"
+    git_tag = f"v{version}"
     preview_categories = sorted(list(set(entry['category'] for entry in catalog_data)))
     Path('README.md').write_text(template.render(
         download_base_url = f"https://github.com/fabien-michel/sweethome3d-textures-ambientcg/raw/{git_tag}",
         preview_base_url = f"https://raw.githubusercontent.com/fabien-michel/sweethome3d-textures-ambientcg/{git_tag}/previews",
-        version = VERSION,
+        version = version,
         catalog_data = catalog_data,
         git_tag = git_tag,
         preview_categories = preview_categories,
@@ -249,19 +263,23 @@ def build_readme(catalog_data):
     ))
 
 
+
 def build_texture_lib(options):
     catalog_data = fetch_catalog_data(options)
+    version = get_version(options)
     download_images(catalog_data, options)
     resize_images(catalog_data)
-    write_catalog_file(catalog_data)
+    write_catalog_file(catalog_data, version)
     package_lib(catalog_data)
     make_preview(catalog_data)
-    build_readme(catalog_data)
+    build_readme(catalog_data, version)
+    write_version(version)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--no-json-cache", action="store_true")
     parser.add_argument("--no-image-cache", action="store_true")
+    parser.add_argument("--no-version", action="store_true")
     options = parser.parse_args()
     build_texture_lib(options)
