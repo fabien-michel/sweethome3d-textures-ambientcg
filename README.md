@@ -13,11 +13,11 @@ Total textures: 1148
 Just download the .sh3t file you want and use the texture library import feature from Sweethome3D from "Furniture" menu.
 
 
-* [ambientcg_1024.sh3t](https://github.com/fabien-michel/sweethome3d-textures-ambientcg/raw/v2022.12.31/ambientcg_1024.sh3t) - 172.3 MB
+* [ambientcg_1024.sh3t](https://fenouil-drive.mycozy.cloud/public?sharecode=QyiDq6EIACQi) - 172.3 MB
 
-* [ambientcg_512.sh3t](https://github.com/fabien-michel/sweethome3d-textures-ambientcg/raw/v2022.12.31/ambientcg_512.sh3t) - 45.5 MB
+* [ambientcg_512.sh3t](https://fenouil-drive.mycozy.cloud/public?sharecode=3gsbVKG3PFBM) - 45.5 MB
 
-* [ambientcg_256.sh3t](https://github.com/fabien-michel/sweethome3d-textures-ambientcg/raw/v2022.12.31/ambientcg_256.sh3t) - 12.5 MB
+* [ambientcg_256.sh3t](https://fenouil-drive.mycozy.cloud/public?sharecode=u2Ps0zAB8cij) - 12.5 MB
 
 
 ## Missing dimensions
