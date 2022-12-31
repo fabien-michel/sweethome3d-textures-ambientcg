@@ -18,6 +18,11 @@ from make_preview import make_preview
 
 
 SIZES = (1024, 512, 256)
+DOWNLOAD_URLS = {
+    1024: "https://fenouil-drive.mycozy.cloud/public?sharecode=QyiDq6EIACQi",
+    512: "https://fenouil-drive.mycozy.cloud/public?sharecode=3gsbVKG3PFBM",
+    256: "https://fenouil-drive.mycozy.cloud/public?sharecode=u2Ps0zAB8cij"
+}
 TOTAL_LIMIT = None
 
 JSON_BATCH_SIZE = 100
@@ -262,7 +267,7 @@ def build_readme(catalog_data, version):
         catalog_data = catalog_data,
         git_tag = git_tag,
         preview_categories = preview_categories,
-        download_versions = [get_package_path(size) for size in SIZES]
+        download_versions = [(get_package_path(size), DOWNLOAD_URLS[size]) for size in SIZES],
     ))
 
 

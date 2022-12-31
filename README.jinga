@@ -13,7 +13,7 @@ Total textures: {{ catalog_data|length }}
 Just download the .sh3t file you want and use the texture library import feature from Sweethome3D from "Furniture" menu.
 
 {% for download_version in download_versions %}
-* [{{ download_version }}]({{ download_base_url }}/{{ download_version }}) - {{ download_version.stat().st_size|filesizeformat }}
+* [{{ download_version.0 }}]({{ download_version.1 }}) - {{ download_version.0.stat().st_size|filesizeformat }}
 {% endfor %}
 
 ## Missing dimensions
