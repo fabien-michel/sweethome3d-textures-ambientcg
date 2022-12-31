@@ -43,6 +43,7 @@ EXCLUDED_CATEGORIES = (
     "SurfaceImperfections",
     "TactilePaving",
     "Tape",
+    "TireTracks",
     "TreeEnd",
     "Wicker",
 )
