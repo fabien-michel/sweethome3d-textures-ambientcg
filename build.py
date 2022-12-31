@@ -227,23 +227,26 @@ def write_catalog_file(catalog_data, version):
 def get_package_path(size):
     return SH3T_PACKAGE_BASE_PATH.with_stem(SH3T_PACKAGE_BASE_PATH.stem + f"_{size}")
 
+def __package_size__(catalog_data, size):
+    sh3t_file_path = get_package_path(size)
+    print(f"Build package {sh3t_file_path}")
+    if sh3t_file_path.exists():
+        sh3t_file_path.unlink()
+
+    with zipfile.ZipFile(sh3t_file_path, "w", compression = zipfile.ZIP_BZIP2) as zip_object:
+        zip_object.write(CATALOG_FILE_PATH)
+        for entry in catalog_data:
+            zip_object.write(
+                get_resized_image_path(size) / entry["image_filename"],
+                f"{IN_ZIP_IMAGE_PATH}/{entry['image_filename']}",
+            )
+
 def package_lib(catalog_data):
     """
-    Create .sh3t (zip file)
+    Create .sh3t (zip file) for each size
     """
-    for size in SIZES:
-        sh3t_file_path = get_package_path(size)
-        print(f"Build package {sh3t_file_path}")
-        if sh3t_file_path.exists():
-            sh3t_file_path.unlink()
-
-        with zipfile.ZipFile(sh3t_file_path, "w") as zip_object:
-            zip_object.write(CATALOG_FILE_PATH)
-            for entry in catalog_data:
-                zip_object.write(
-                    get_resized_image_path(size) / entry["image_filename"],
-                    f"{IN_ZIP_IMAGE_PATH}/{entry['image_filename']}",
-                )
+    with multiprocessing.Pool() as p:
+        p.map(partial(__package_size__, catalog_data), SIZES)
 
 
 def build_readme(catalog_data, version):
