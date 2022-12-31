@@ -1,3 +1,0 @@
-ambientcg_1024.sh3t filter=lfs diff=lfs merge=lfs -text
-ambientcg_256.sh3t filter=lfs diff=lfs merge=lfs -text
-ambientcg_512.sh3t filter=lfs diff=lfs merge=lfs -text

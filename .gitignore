@@ -3,3 +3,4 @@ __pycache__/
 PluginTexturesCatalog.properties
 requests_cache.sqlite
 ambientcg_*/*.jpg
+*.sh3t
