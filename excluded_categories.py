@@ -46,4 +46,5 @@ EXCLUDED_CATEGORIES = (
     "TireTracks",
     "TreeEnd",
     "Wicker",
+    "Ivory",
 )
