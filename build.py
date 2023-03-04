@@ -238,7 +238,7 @@ def __package_size__(catalog_data, size):
     if sh3t_file_path.exists():
         sh3t_file_path.unlink()
 
-    with zipfile.ZipFile(sh3t_file_path, "w", compression = zipfile.ZIP_BZIP2) as zip_object:
+    with zipfile.ZipFile(sh3t_file_path, "w", compression = zipfile.ZIP_DEFLATED) as zip_object:
         zip_object.write(CATALOG_FILE_PATH)
         for entry in catalog_data:
             zip_object.write(
