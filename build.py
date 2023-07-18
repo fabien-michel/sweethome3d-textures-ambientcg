@@ -257,7 +257,7 @@ def package_lib(catalog_data):
 def build_readme(catalog_data, version):
     print("Build README.md")
     env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
-    template = env.get_template("README.jinga")
+    template = env.get_template("README.jinja")
     git_tag = f"v{version}"
     preview_categories = sorted(list(set(entry['category'] for entry in catalog_data)))
     Path('README.md').write_text(template.render(
