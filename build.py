@@ -2,8 +2,9 @@ import argparse
 from datetime import timedelta
 import multiprocessing
 from time import strftime
+import tomlkit
 import zipfile
-from functools import lru_cache, partial
+from functools import partial
 from io import BytesIO
 from itertools import product
 from pathlib import Path
@@ -32,7 +33,7 @@ RESIZED_IMAGE_BASE_PATH = Path("ambientcg")
 IN_ZIP_IMAGE_PATH = "ambientcg"
 SH3T_PACKAGE_BASE_PATH = Path("ambientcg.sh3t")
 CATALOG_FILE_PATH = Path("PluginTexturesCatalog.properties")
-VERSION_PATH = Path("VERSION")
+PYPROJECT_PATH = Path("pyproject.toml")
 
 ORIGINAL_IMAGES_PATH.mkdir(exist_ok=True)
 
@@ -41,14 +42,16 @@ def get_version(options):
     return today version
     """
     if options.no_version:
-        return VERSION_PATH.read_text(encoding='utf-8')
+        pyproject_toml = tomlkit.parse(PYPROJECT_PATH.read_text(encoding="UTF-8"))
+        return pyproject_toml["tool"]["poetry"]["version"]
 
     return strftime("%Y.%m.%d")
 
 def write_version(version):
     print(f"Version: {version}")
-    VERSION_PATH.write_text(version, encoding="utf-8")
-
+    pyproject_toml = tomlkit.parse(PYPROJECT_PATH.read_text(encoding="UTF-8"))
+    pyproject_toml["tool"]["poetry"]["version"] = version
+    PYPROJECT_PATH.write_text(tomlkit.dumps(pyproject_toml), encoding="UTF-8")
 
 
 def check_file(zip_content, endswith_strings):

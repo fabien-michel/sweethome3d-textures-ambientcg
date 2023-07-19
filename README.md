@@ -25,24 +25,22 @@ Sadly a lot of textures haven't dimensions defined in ambientcg.com. The script 
 
 ## Build / update the library
 
-In a python virtual environnement install pypi dependencies from `requirements.txt`:
+In a python virtual environnement install pypi dependencies using poetry:
 
 ```
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+poetry install
 ```
 Run script:
 
 ```
-python build.py
+poetry run python build.py
 ```
 ⚠️: 🕑 Zip download take a long time !
 
 ## Run without cache
 
 ```
-python build.py --no-json-cache --no-image-cache
+poetry run python build.py --no-json-cache --no-image-cache
 ```
 
 ## Licence and Author

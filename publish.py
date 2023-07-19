@@ -1,11 +1,13 @@
 import os
-from time import strftime
 import urllib.parse
-from pathlib import Path
 
-from build import SIZES, DOWNLOAD_URLS
+import tomlkit
 
-VERSION = Path("VERSION").read_text()
+from build import SIZES, DOWNLOAD_URLS, PYPROJECT_PATH
+
+pyproject_toml = tomlkit.parse(PYPROJECT_PATH.read_text(encoding="UTF-8"))
+
+VERSION = pyproject_toml["tool"]["poetry"]["version"]
 GIT_VERSION = f"v{VERSION}"
 
 if __name__ == "__main__":
