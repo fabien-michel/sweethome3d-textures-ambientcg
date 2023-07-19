@@ -11,7 +11,7 @@ VERSION = pyproject_toml["tool"]["poetry"]["version"]
 GIT_VERSION = f"v{VERSION}"
 
 if __name__ == "__main__":
-    os.system("git add VERSION README.md previews/*.webp")
+    os.system("git add pyproject.toml README.md previews/*.webp")
     os.system(f"git commit -m \"version: {GIT_VERSION}\"")
     os.system(f"git tag {GIT_VERSION}")
     # os.system("cd .. && bfg --delete-files \"*.sh3t\" sweethome3d-textures-ambientcg")
