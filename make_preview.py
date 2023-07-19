@@ -1,10 +1,9 @@
 import multiprocessing
-import os
 from collections import defaultdict
 from operator import itemgetter
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont, ImageOps
+from PIL import Image, ImageDraw, ImageFont
 
 # Configure values
 IMAGE_WIDTH = 1024
@@ -76,7 +75,7 @@ def make_category_preview(catalog_entries):
         main_image.paste(image, (x, y))
 
         # Draw the filename under the thumbnail
-        text_width, text_height = draw.textsize(entry["assetId"], font=font)
+        text_width = draw.textlength(entry["assetId"], font=font)
         draw.text(
             (
                 x + (THUMBNAIL_SIZE - text_width) / 2,
