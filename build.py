@@ -79,7 +79,7 @@ def get_asset_zip_url(asset, quality=1):
                 download.get("zipContent", []), ["Color.jpg", "var1.jpg"]
             )
             if jpg_filename:
-                return download["fullDownloadPath"], jpg_filename
+                return download["downloadLink"], jpg_filename
 
     if quality < 16:
         return get_asset_zip_url(asset, quality + 1)
