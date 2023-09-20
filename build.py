@@ -1,7 +1,7 @@
 import argparse
 from datetime import timedelta
 import multiprocessing
-from time import strftime
+from time import sleep, strftime
 import tomlkit
 import zipfile
 from functools import partial
@@ -31,6 +31,7 @@ BASE_URL = "https://ambientcg.com/api/v2/full_json"
 ORIGINAL_IMAGES_PATH = Path("ambientcg_originals")
 RESIZED_IMAGE_BASE_PATH = Path("ambientcg")
 IN_ZIP_IMAGE_PATH = "ambientcg"
+ZIP_DOWLOAD_RETRY = 5
 SH3T_PACKAGE_BASE_PATH = Path("ambientcg.sh3t")
 CATALOG_FILE_PATH = Path("PluginTexturesCatalog.properties")
 PYPROJECT_PATH = Path("pyproject.toml")
@@ -171,9 +172,21 @@ def download_images(catalog_data, options):
         if not options.no_image_cache and dest_path.exists():
             continue
         print(entry["zip_url"])
-
-        zip_file_response = requests.get(entry["zip_url"])
-
+        
+        retry = ZIP_DOWLOAD_RETRY
+        while retry:
+            try:
+                zip_file_response = requests.get(entry["zip_url"])
+            except requests.exceptions.ConnectionError:
+                retry -=1
+                if not retry:
+                    raise
+                print("Hmm, zip download fail. New attempt in 5 seconds")
+                sleep(5)
+            else:
+                break
+                    
+            
         with zipfile.ZipFile(BytesIO(zip_file_response.content)) as thezip:
             color_file_info = next(
                 filter(
