@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sweethome3d-textures-ambientcg"
-version = "2023.11.23"
+version = "2024.02.29"
 description = "Sweethome3D texture library generator from ambientcg.com textures"
 authors = ["Your Name <you@example.com>"]
 license = "WTFPL"
