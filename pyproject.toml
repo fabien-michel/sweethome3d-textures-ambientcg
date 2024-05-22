@@ -1,10 +1,11 @@
 [tool.poetry]
 name = "sweethome3d-textures-ambientcg"
-version = "2024.03.27"
+version = "2024.05.22"
 description = "Sweethome3D texture library generator from ambientcg.com textures"
 authors = ["Your Name <you@example.com>"]
 license = "WTFPL"
 readme = "README.md"
+package-mode = false
 # packages = [{include = "sweethome3d_textures_ambientcg"}]
 
 [tool.poetry.dependencies]
