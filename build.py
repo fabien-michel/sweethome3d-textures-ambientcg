@@ -20,9 +20,9 @@ from make_preview import make_preview
 
 SIZES = (1024, 512, 256)
 DOWNLOAD_URLS = {
-    1024: "https://fenouil-drive.mycozy.cloud/public?sharecode=QyiDq6EIACQi",
-    512: "https://fenouil-drive.mycozy.cloud/public?sharecode=u2Ps0zAB8cij",
-    256: "https://fenouil-drive.mycozy.cloud/public?sharecode=3gsbVKG3PFBM",
+    1024: "https://murena.io/s/zMTWK4NA9ezqBYW",
+    512: "https://murena.io/s/JGp3TcAaoT2nyAe",
+    256: "https://murena.io/s/HEjG9xBt9cCGF4s",
 }
 TOTAL_LIMIT = None
 
