@@ -96,6 +96,9 @@ def get_asset_data(asset):
 
     if not zip_url:
         raise Exception("No zip url found")
+    
+    # API return None for category, use displayCategory instead
+    asset["category"] =  asset["category"] or asset["displayCategory"].replace(" ","")
 
     if asset["category"] in EXCLUDED_CATEGORIES:
         raise Exception("Excluded category")
