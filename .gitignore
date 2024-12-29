@@ -4,3 +4,4 @@ PluginTexturesCatalog.properties
 requests_cache.sqlite
 ambientcg_*/*.jpg
 *.sh3t
+.vscode/launch.json
