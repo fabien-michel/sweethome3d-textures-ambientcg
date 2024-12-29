@@ -21,9 +21,9 @@ Image.MAX_IMAGE_PIXELS = 200000000
 
 SIZES = (1024, 512, 256)
 DOWNLOAD_URLS = {
-    1024: "https://murena.io/s/zMTWK4NA9ezqBYW",
-    512: "https://murena.io/s/JGp3TcAaoT2nyAe",
-    256: "https://murena.io/s/HEjG9xBt9cCGF4s",
+    1024: "https://drive.usercontent.google.com/download?id=1iXs53RubVdbdU5RUks3DL2x0arnx4QtH&export=download",
+    512: "https://drive.usercontent.google.com/download?id=190nkzMi4Rg1LU60bdnRXY9W1aakn6E4n&export=download",
+    256: "https://drive.usercontent.google.com/download?id=1e6GomMTlIl8vMJc2CvvJ-zBKXgESHVm0&export=download",
 }
 TOTAL_LIMIT = None
 
