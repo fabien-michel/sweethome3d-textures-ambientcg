@@ -17,6 +17,7 @@ from PIL import Image, ImageOps
 from excluded_categories import EXCLUDED_CATEGORIES
 from make_preview import make_preview
 
+Image.MAX_IMAGE_PIXELS = 200000000
 
 SIZES = (1024, 512, 256)
 DOWNLOAD_URLS = {
