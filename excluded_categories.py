@@ -46,6 +46,7 @@ EXCLUDED_CATEGORIES = (
     "Sticker",
     "StickerSet",
     "StickSet",
+    "Styrofoam",
     "SurfaceImperfections",
     "TactilePaving",
     "Tape",
