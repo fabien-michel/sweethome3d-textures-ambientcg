@@ -32,7 +32,7 @@ BASE_URL = "https://ambientcg.com/api/v2/full_json"
 ORIGINAL_IMAGES_PATH = Path("ambientcg_originals")
 RESIZED_IMAGE_BASE_PATH = Path("ambientcg")
 IN_ZIP_IMAGE_PATH = "ambientcg"
-ZIP_DOWLOAD_RETRY = 5
+ZIP_DOWNLOAD_RETRY = 5
 SH3T_PACKAGE_BASE_PATH = Path("ambientcg.sh3t")
 CATALOG_FILE_PATH = Path("PluginTexturesCatalog.properties")
 PYPROJECT_PATH = Path("pyproject.toml")
@@ -124,7 +124,7 @@ def get_asset_data(asset):
 def fetch_catalog_data(options):
     """
     Fetch remote JSON of all material assets and return list of data required to
-    download images and to build calalog
+    download images and to build catalog
     """
     # expire_after = 0 if options.no_json_cache else -1
     session = requests_cache.CachedSession("requests_cache", expire_after=timedelta(days=1))
@@ -177,7 +177,7 @@ def download_images(catalog_data, options):
             continue
         print(entry["zip_url"])
         
-        retry = ZIP_DOWLOAD_RETRY
+        retry = ZIP_DOWNLOAD_RETRY
         while retry:
             try:
                 zip_file_response = requests.get(entry["zip_url"])
@@ -191,18 +191,18 @@ def download_images(catalog_data, options):
                 break
                     
             
-        with zipfile.ZipFile(BytesIO(zip_file_response.content)) as thezip:
+        with zipfile.ZipFile(BytesIO(zip_file_response.content)) as the_zip:
             color_file_info = next(
                 filter(
                     lambda zipinfo: zipinfo.filename == entry["in_zip_jpg_filename"],
-                    thezip.infolist(),
+                    the_zip.infolist(),
                 ),
                 None,
             )
 
-            with thezip.open(color_file_info) as thefile:
+            with the_zip.open(color_file_info) as the_file:
                 with open(dest_path, "wb") as f:
-                    f.write(thefile.read())
+                    f.write(the_file.read())
 
 
 def get_resized_image_path(size):
@@ -227,7 +227,7 @@ def resize_image(original_image_path, size=256):
 
 def resize_images(catalog_data):
     """
-    Parralellized image resize to fit in given box
+    Parallelized image resize to fit in given box
     """
     image_files = [
         ORIGINAL_IMAGES_PATH / entry["image_filename"] for entry in catalog_data
